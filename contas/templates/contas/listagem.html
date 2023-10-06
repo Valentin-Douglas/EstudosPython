@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt/Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listagem de Transações</title>
+</head>
+<body>
+    <h2>Listagem de transações</h2>
+    <ul>
+        {% for transacao in transacoes %}
+            <li>
+                {{transacao.descricao}} - {{transacao.data}} - 
+                    R${{transacao.valor}} - {{transacao.categoria}}
+            </li>
+        {% endfor %}
+    </ul>
+    <button><a href="{% url 'url_nova' %}">Criar nova transação</a></button>
+</body>
+</html>
